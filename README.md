@@ -8,7 +8,7 @@ Documentation
 ## Installation
 Pretty simple with [Composer](http://packagist.org), add:
 
-```json
+```
 {
     "require": {
         "matuck/aliasbundle": "dev-master"
@@ -17,18 +17,18 @@ Pretty simple with [Composer](http://packagist.org), add:
 ```
 Then run the below command to install the bundle
 
-'''
+```
 php composer.phar update
-'''
+```
 
 ## Configure
 Add the below snippet to the very bottom of your routing.yml file
 
-'''
+```
 matuck_alias:
     resource: "@matuckAliasBundle/Resources/config/routing.yml"
     prefix:   /
-'''
+```
 
 This has to be the very last entry or your hard defined routes will not work.
 
@@ -53,4 +53,4 @@ foreach($aliases as $alias)
 {
     echo $alias->getAlias();
 }
-'''
+```

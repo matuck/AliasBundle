@@ -1,0 +1,7 @@
+parameters:
+#    matuck_alias.example.class: matuck\AliasBundle\Example
+
+services:
+    matuck_alias:
+        class: matuck\AliasBundle\Service\AliasSVC
+        arguments:  [ "@service_container" ]

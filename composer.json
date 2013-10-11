@@ -1,0 +1,24 @@
+{
+    "name": "matuck/aliasbundle",
+    "type": "library",
+    "description":  "Provides a catch all route",
+    "keywords": ["Symfony2", "Route"],
+    "license": "GPL-v3",
+    "homepage": "https://github.com/matuck/AliasBundle.git",
+    "authors": [
+        {
+            "name": "Mitch Tuck",
+            "email": "matuck@matuck.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "symfony/framework-bundle": "~2.0",
+        "doctrine/orm": ">=2.2.3,<2.4-dev",
+        "doctrine/doctrine-bundle": "1.2.*"
+    },
+    "autoload": {
+        "psr-0": { "matuck\\AliasBundle\\": "" }
+    },
+    "target-dir": "matuck/AliasBundle"
+}

@@ -1,0 +1,8 @@
+matuck_alias_testredirect:
+    pattern: /testredirect/{param}
+    defaults: { _controller: matuckAliasBundle:Default:testredirect }
+matuck_alias_default:
+    pattern: /{url}
+    defaults: { _controller: matuckAliasBundle:Default:default}
+    requirements:
+        url: ".+"

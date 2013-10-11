@@ -8,7 +8,7 @@ Documentation
 ## Installation
 Pretty simple with [Composer](http://packagist.org), add:
 
-```
+```json
 {
     "require": {
         "matuck/aliasbundle": "dev-master"
@@ -24,7 +24,7 @@ php composer.phar update
 ## Configure
 Add the below snippet to the very bottom of your routing.yml file
 
-```
+```yaml
 matuck_alias:
     resource: "@matuckAliasBundle/Resources/config/routing.yml"
     prefix:   /
@@ -35,7 +35,7 @@ This has to be the very last entry or your hard defined routes will not work.
 ## Usage
 From inside a controller
 
-```
+```php
 $service = $this->get('matuck_alias');
 
 //To create a new alias of /myalias which goes to path www.example.com/page/somepage

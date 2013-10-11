@@ -20,6 +20,11 @@ Then run the below command to install the bundle
 ```
 php composer.phar update
 ```
+Database tables also need to created so run 
+
+```
+php app/console Doctrine:schema:update --force
+```
 
 ## Configure
 Add the below snippet to the very bottom of your routing.yml file

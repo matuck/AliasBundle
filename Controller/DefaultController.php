@@ -9,10 +9,14 @@ class DefaultController extends Controller
 {
     public function defaultAction($url = '')
     {
+        $logger = $this->get('logger');
+        /* @var $logger \Monolog\Logger */
         $aliasservice = $this->get('matuck_alias');
         try
         {
-            $trueroute = $this->get('router')->match($aliasservice->getTruepath('/' . $url));
+            $truepath = $aliasservice->getTruepath('/' . $url);
+            $trueroute = $this->get('router')->match($truepath);
+            $logger->info(sprintf('Forward %s to %s', '/'.$url, $truepath));
             return $this->forward($trueroute['_controller'], $trueroute);
         }
         catch(\Doctrine\ORM\EntityNotFoundException $e)
